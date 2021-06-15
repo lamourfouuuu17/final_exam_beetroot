@@ -1,0 +1,242 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: $colorgr url(../assets/img/header-bcg.png) center / cover
+    no-repeat;
+
+  &_nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    &_logo {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 22%;
+
+      &__imlogo {
+        width: 46.28px;
+        height: 45.88px;
+      }
+      &__name {
+        color: white;
+        @include Proxima;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase;
+      }
+    }
+
+    &__arrow::after {
+      content: "";
+      visibility: hidden;
+      height: 0;
+      width: 0;
+      border-top: 10px solid #fff;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      position: absolute;
+      top: 79px;
+      margin-left: 10px;
+    }
+
+    &_menu {
+      display: none;
+      list-style-type: none;
+      position: absolute;
+      top: 87px;
+    }
+
+    &_hrefs {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      width: 48%;
+      &__elnav {
+        @include fontMuseo;
+        font-size: 14px;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__button {
+      width: 15%;
+    }
+  }
+
+  &_info {
+    &_titles {
+      &__main {
+        @include Roboto;
+        font-size: 74px;
+        color: white;
+        margin-top: 358px;
+      }
+      &__img {
+        position: absolute;
+        top: 445px;
+        width: 100%;
+        max-width: 974px;
+        height: auto;
+      }
+    }
+
+    &_buttons {
+      margin-top: 57px;
+      &_btn {
+        background-color: $coloryel;
+        color: $colorbl;
+      }
+
+      &_text {
+        @include fontMuseo;
+        font-size: 16px;
+        color: white;
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header_nav_logo__name {
+    font-size: 16px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header_nav_logo {
+    width: 30%;
+  }
+  .header_nav__arrow::after {
+    visibility: visible;
+  }
+  .header_nav_hrefs__elnav {
+    font-size: 16px;
+
+    &:hover {
+      transform: none;
+    }
+
+    &:hover .header_nav_menu {
+      display: block;
+    }
+  }
+  .elnav--visibility {
+    display: none;
+  }
+  .header_info_titles__img {
+    max-width: 700px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .header_nav_logo {
+    width: 30%;
+  }
+  .header_nav__arrow::after {
+    visibility: visible;
+  }
+  .header_nav_hrefs__elnav {
+    font-size: 16px;
+
+    &:hover {
+      transform: none;
+    }
+
+    &:hover .header_nav_menu {
+      display: block;
+    }
+  }
+  .header_nav_logo__name {
+    font-size: 14px;
+  }
+  .elnav--visibility {
+    display: none;
+  }
+  .header_info_titles__main {
+    font-size: 49px;
+  }
+  .header_info_titles__img {
+    max-width: 450px;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .header_info_titles__main {
+    font-size: 30px;
+  }
+  .header_nav_logo {
+    width: 30%;
+  }
+  .header_nav_hrefs__elnav {
+    font-size: 16px;
+
+    &:hover {
+      transform: none;
+    }
+
+    &:hover .header_nav_menu {
+      display: block;
+    }
+  }
+  .elnav--visibility {
+    display: none;
+  }
+  .header_info_titles__img {
+    max-width: 300px;
+  }
+  .header_info_buttons_text {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .header_nav_logo {
+    width: 30%;
+  }
+
+  .header_nav_hrefs__elnav {
+    font-size: 16px;
+
+    &:hover {
+      transform: none;
+    }
+
+    &:hover .header_nav_menu {
+      display: block;
+    }
+  }
+  .elnav--visibility {
+    display: none;
+  }
+  .header_info_titles__img {
+    max-width: 250px;
+  }
+}

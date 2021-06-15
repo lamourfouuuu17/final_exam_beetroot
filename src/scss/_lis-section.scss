@@ -1,0 +1,47 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.lis-section {
+  background-color: $colorgr;
+
+  &__img {
+    margin-right: 90px;
+  }
+
+  &_block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_txt {
+    &__title {
+      @include Roboto;
+      color: white;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    &__span {
+      color: $coloryel;
+    }
+
+    &__spa {
+      color: white;
+      @include fontBoldMuseo;
+
+      &--crossed {
+        @include fontMuseo;
+        color: #afafaf;
+        text-decoration: line-through;
+        margin-left: 25px;
+      }
+    }
+
+    &__btn {
+      display: block;
+      background-color: $coloryel;
+      color: black;
+      margin-top: 50px;
+    }
+  }
+}

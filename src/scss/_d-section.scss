@@ -1,0 +1,29 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.d-section {
+  background-color: $colorgr;
+
+  &_titles {
+    &__title {
+      @include Roboto;
+      color: white;
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 23px;
+    }
+
+    &__spa {
+      color: $coloryel;
+    }
+
+    &__prg {
+      @include fontMuseo;
+      color: white;
+      font-size: 16px;
+      line-height: 28px;
+      margin-top: 0;
+      margin-bottom: 70px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.d-component {
+  width: 22%;
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    @include Roboto;
+    font-size: 22px;
+    color: white;
+    margin: 70px 0 27px;
+  }
+
+  &__prg {
+    @include fontMuseo;
+    font-size: 16px;
+    color: white;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__spa {
+    color: white;
+    @include fontBoldMuseo;
+
+    &--crossed {
+      @include fontMuseo;
+      color: #afafaf;
+      text-decoration: line-through;
+      margin-left: 25px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    max-width: 272px;
+    height: 54px;
+    border-radius: 5px;
+    border: solid 1px $coloryel;
+    outline: none;
+    background-color: transparent;
+    @include fontMuseo;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    margin-top: 50px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+// @media (max-width: 320px) {
+//     .btn {
+//       font-size: 12px;
+//     }
+//   }

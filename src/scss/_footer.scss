@@ -1,0 +1,102 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.header {
+  &_nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    &_logo {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 22%;
+
+      &__imlogo {
+        width: 46.28px;
+        height: 45.88px;
+      }
+      &__name {
+        color: black;
+        @include Proxima;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase;
+      }
+    }
+
+    &__arrow::after {
+      content: "";
+      visibility: hidden;
+      height: 0;
+      width: 0;
+      border-top: 10px solid black;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      position: absolute;
+      top: 79px;
+      margin-left: 10px;
+    }
+
+    &_menu {
+      display: none;
+      list-style-type: none;
+      position: absolute;
+      top: 87px;
+    }
+
+    &_hrefs {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      width: 48%;
+      &__elnav {
+        @include fontMuseo;
+        font-size: 14px;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__button {
+      width: 15%;
+    }
+  }
+
+  &_info {
+    &_titles {
+      &__main {
+        @include Roboto;
+        font-size: 74px;
+        color: black;
+        margin-top: 358px;
+      }
+      &__img {
+        position: absolute;
+        top: 445px;
+        width: 100%;
+        max-width: 974px;
+        height: auto;
+      }
+    }
+
+    &_buttons {
+      margin-top: 57px;
+      &_btn {
+        background-color: $coloryel;
+        color: $colorbl;
+      }
+
+      &_text {
+        @include fontMuseo;
+        font-size: 16px;
+        color: black;
+        margin-left: 40px;
+      }
+    }
+  }
+}

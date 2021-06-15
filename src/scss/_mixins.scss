@@ -1,0 +1,28 @@
+$coloryel: #fdc400;
+$colorgr: #171c1f;
+$colorwh: #f6f6f6;
+$colorbl: #171717;
+
+@mixin fontMuseo {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin fontBoldMuseo {
+  font-family: Museo Sans Cyrl;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin Roboto {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin Proxima {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 300;
+}

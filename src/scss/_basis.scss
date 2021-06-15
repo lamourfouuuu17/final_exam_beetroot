@@ -1,0 +1,38 @@
+.container {
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+  padding: 54px 100px 75px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

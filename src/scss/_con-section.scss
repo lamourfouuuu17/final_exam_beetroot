@@ -1,0 +1,57 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.con-section {
+  background-color: $colorgr;
+
+  &_block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_txt {
+    overflow: hidden;
+    margin-right: 70px;
+    width: 40%;
+
+    &__title {
+      @include Roboto;
+      color: white;
+      font-size: 40px;
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+
+    &__span {
+      color: $coloryel;
+    }
+
+    &_spa {
+      @include fontMuseo;
+      font-size: 16px;
+      color: white;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: 54px;
+    border-radius: 5px;
+    border: solid 1px $coloryel;
+    outline: none;
+    background-color: transparent;
+    @include fontMuseo;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    margin-top: 50px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &_img {
+    width: 60%;
+  }
+}
