@@ -1,0 +1,54 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.e-section {
+  background-color: $colorgr;
+
+  flex-direction: row;
+  justify-content: space-between;
+  &_img-block {
+    width: 43%;
+    position: relative;
+    &_img {
+      width: 100%;
+      max-width: 503px;
+      height: 353px;
+    }
+
+    &_logo {
+      position: absolute;
+      top: 19px;
+      right: -9px;
+    }
+  }
+
+  &_text {
+    margin-top: 62px;
+    margin-left: 98px;
+    width: 50%;
+
+    &__vector {
+      position: absolute;
+    }
+
+    &__title {
+      @include Roboto;
+      font-size: 40px;
+      color: white;
+      margin-bottom: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    &__spa {
+      color: $coloryel;
+    }
+
+    &__prg {
+      @include fontMuseo;
+      color: white;
+      text-align: justify;
+      margin: 0;
+      line-height: 28px;
+    }
+  }
+}

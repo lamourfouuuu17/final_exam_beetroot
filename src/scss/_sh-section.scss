@@ -1,0 +1,80 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.sh-section {
+  background-color: $colorgr;
+
+  &_first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__img {
+      width: 43%;
+    }
+
+    &_txt {
+      margin-top: 62px;
+      width: 50%;
+
+      &__vector {
+        z-index: 2;
+      }
+
+      &__title {
+        @include Roboto;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 40px;
+        letter-spacing: 0.02em;
+        z-index: 1;
+      }
+
+      &__prg {
+        @include fontMuseo;
+        color: white;
+        text-align: justify;
+        margin: 0;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &_second {
+    display: flex;
+    flex-direction: row;
+    &__img {
+      width: 57%;
+      margin-left: 75px;
+      align-self: start;
+    }
+
+    &_txt {
+      width: 43%;
+
+      &__title {
+        @include Roboto;
+        font-size: 40px;
+        color: white;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        letter-spacing: 0.02em;
+        z-index: 1;
+      }
+
+      &__prg {
+        @include fontMuseo;
+        font-size: 16px;
+        color: white;
+        text-align: justify;
+        margin: 0;
+        line-height: 28px;
+      }
+
+      &_learn {
+        display: inline;
+        @include fontMuseo;
+        color: white;
+      }
+    }
+  }
+}

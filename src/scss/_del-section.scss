@@ -1,0 +1,50 @@
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_fonts.scss";
+
+.del-section {
+  background-color: $colorgr;
+
+  &_block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_txt {
+    overflow: hidden;
+    margin-right: 70px;
+    width: 40%;
+
+    &__img {
+      position: absolute;
+    }
+    &__title {
+      @include Roboto;
+      color: white;
+      font-size: 40px;
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+
+    &__span {
+      color: $coloryel;
+    }
+
+    &__learn {
+      display: inline;
+      @include fontMuseo;
+      color: white;
+      font-size: 16px;
+    }
+  }
+
+  &_prg {
+    width: 60%;
+    &_prgh {
+      @include fontMuseo;
+      font-size: 16px;
+      color: white;
+      margin: 0;
+      line-height: 28px;
+    }
+  }
+}
